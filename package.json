@@ -1,0 +1,26 @@
+{
+  "name": "cnn-antools-factors-fe",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "cnn-starter-app": "git+ssh://git@github.com/cnnlabs/cnn-starter-app.git"
+  },
+  "dependencies": {
+    "babel-register": "6.24.1",
+    "babel-resolver": "1.1.0",
+    "cnn-server": "git+https://github.com/cnnlabs/cnn-server.git",
+    "prop-types": "15.5.10",
+    "react": "15.5.4",
+    "react-dom": "15.5.4",
+    "react-helmet": "5.0.3",
+    "react-hot-loader": "3.0.0-beta.6",
+    "react-router-dom": "4.1.1"
+  },
+  "scripts": {
+    "analyze": "cnn-starter-app analyze",
+    "build": "cnn-starter-app build",
+    "create": "cnn-starter-app create",
+    "start": "cnn-starter-app start",
+    "test": "cnn-starter-app test"
+  }
+}
