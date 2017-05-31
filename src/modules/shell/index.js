@@ -16,9 +16,9 @@ function App() {
         <div>
             <Helmet
                 titleTemplate="%s - CNN.com"
-                defaultTitle="CNN React Starter Kit"
+                defaultTitle="CNN Apple News Tools Factors Front End"
             >
-                <meta name="description" content="A simple starter kit for building React applications." />
+                <meta name="description" content="CNN Apple News Tools Factors Front End" />
             </Helmet>
             <Header links={navigation} />
             <Switch>
