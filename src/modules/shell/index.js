@@ -21,13 +21,16 @@ function App() {
             >
                 <meta name="description" content="CNN Apple News Tools Factors Front End" />
             </Helmet>
-            <Header links={navigation} />
-            <Card className={styles.foo}>hi</Card>
-            <Switch>
+            <div className={styles.contentWrapper}>
+                <Header links={navigation} />
+                <h1>Factors</h1>
+                <Card className={styles.paper}></Card>
+                <Switch>
                 {routes.map((route, i) => (
                     <Route key={i} {...route} />
                 ))}
-            </Switch>
+                </Switch>
+            </div>
             <Footer />
         </div>
     );

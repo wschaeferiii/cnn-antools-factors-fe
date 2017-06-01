@@ -1,3 +1,9 @@
+html,body {
+    background: rgba(217, 217, 217, 1) url('http://i2.cdn.turner.com/cnn/partners/ksa/background.png');
+    background-position: top;
+    background-repeat: repeat-x;
+}
+
 html,
 body {
     height: 100%;
@@ -8,6 +14,9 @@ body {
 
 body {
     font-family: Helvetica, sans-serif;
+    background-color: rgba(217, 217, 217, 1);
+    // using to stick footer to bottom
+    margin-bottom: -50px;
 }
 
 *,
@@ -16,8 +25,21 @@ body {
     box-sizing: border-box;
 }
 
-.foo {
+.paper {
     margin: 0 auto;
-    width: 800px;
-    height: 800px;
+    width: 100%;
+    height: auto;
+    min-height: 800px;
+    margin-bottom: 5%;
+}
+
+.contentWrapper {
+    width: 77.4%;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 36px;
 }
