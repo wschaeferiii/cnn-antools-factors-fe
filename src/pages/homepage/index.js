@@ -11,7 +11,6 @@ class Homepage extends Component {
                 <Helmet>
                     <title>CNN Apple News Tools Factors Front End</title>
                 </Helmet>
-                Things and stuff.
             </div>
         );
     }

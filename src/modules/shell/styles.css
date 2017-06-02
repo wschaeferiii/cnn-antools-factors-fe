@@ -1,23 +1,72 @@
+@font-face {
+  font-family: 'CNN Sans Light';
+  src: url('http://www.i.cdn.cnn.com/.a/fonts/cnn/3.5.0/cnnsans-light.woff2') format('woff2');
+}
+
 html,
 body {
     height: 100%;
     margin: 0;
     padding: 0;
     width: 100%;
+    background-color:#D9D9D9;
 }
 
 body {
     font-family: Helvetica, sans-serif;
+    position: absolute;
+    z-index:-2;   
 }
 
-*,
+/**,
 *:before,
 *:after {
     box-sizing: border-box;
+}*/
+
+/*CUSTOM ELEMENTS*/
+content-container,
+background-layer1,
+background-layer2{
+    display:block;
 }
 
-.foo {
-    margin: 0 auto;
-    width: 800px;
-    height: 800px;
+background-layer1{
+    background-color: #0c0c0c;  
+    height:50px; 
+    width:100%;
+    position: absolute; 
+    z-index:-1;
 }
+
+background-layer2 {
+    position:absolute;
+    z-index:-3;
+    height:220px;
+    background-color:#262626;
+    width: 100%;  
+}
+
+content-container{
+    width:1100px;
+    margin: 0 auto;
+}
+
+.card{
+    height: 20px;
+    margin-bottom: 100px;
+}
+
+h1{
+    font: 36px/90px CNN Sans Light, sans-serif;
+    color: #FEFEFE;
+    margin: 0;
+}
+
+shell-container{
+    display: flex;
+    flex-direction: column; 
+    height:100%;
+}
+
+

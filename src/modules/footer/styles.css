@@ -3,4 +3,6 @@
     color: #000;
     padding: 10px 20px;
     text-align: center;
+    align-self:flex-start;
+    flex-grow:1;
 }
