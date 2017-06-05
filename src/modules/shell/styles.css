@@ -9,7 +9,8 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color:#D9D9D9;
+
+    background:linear-gradient( #0c0c0c 51px,#262626 51px, #262626 170px, #d9d9d9 170px, #d9d9d9);
 }
 
 body {

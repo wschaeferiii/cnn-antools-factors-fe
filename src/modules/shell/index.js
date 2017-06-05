@@ -16,8 +16,7 @@ import styles from 'modules/shell/styles.css';
 function App() {
     return (
         <shell-container>
-            <background-layer1></background-layer1>
-            <background-layer2></background-layer2>
+
             <content-container>
                 <Helmet
                     titleTemplate="%s - CNN.com"
