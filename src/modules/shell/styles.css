@@ -1,7 +1,33 @@
+/*CUSTOM ELEMENTS--------------------*/
+content-container{
+    display:block;
+}
+
+/*END CUSTOM ELEMENTS--------------------*/
+
+
+/*TYPOGRAPHY---------------------*/
+
 @font-face {
   font-family: 'CNN Sans Light';
   src: url('http://www.i.cdn.cnn.com/.a/fonts/cnn/3.5.0/cnnsans-light.woff2') format('woff2');
 }
+
+h1{
+    font: 36px/90px CNN Sans Light, sans-serif;
+    color: #FEFEFE;
+    margin: 0;
+}
+
+/*END TYPOGRAPHY----------------*/
+
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
 
 html,
 body {
@@ -26,17 +52,7 @@ body {
         linear-gradient(#d9d9d9 170px, #d9d9d9 100%);
 }
 
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
-/*CUSTOM ELEMENTS*/
-content-container{
-    display:block;
-}
-
+/*CONTENT CONTAINER MUST EXIST SO THAT THERE IS GRANULAR STYLING CONTROL OVER IT'S CONTENTS*/
 content-container{
     width:1100px;
     margin: 0 auto;
@@ -47,17 +63,9 @@ content-container{
     margin-bottom:50px;
 }
 
-h1{
-    font: 36px/90px CNN Sans Light, sans-serif;
-    color: #FEFEFE;
-    margin: 0;
-}
-
 shell-container{
     display: flex;
     flex-direction: column; 
     justify-content: space-between;
     height:100%;
 }
-
-
