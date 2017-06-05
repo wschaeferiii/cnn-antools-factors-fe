@@ -33,7 +33,7 @@ function App() {
                     ))}
                 </Switch>
             </content-container>
-            <Footer/>
+            <Footer className={styles.footer}/>
         </shell-container>
     );
 }

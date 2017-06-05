@@ -5,28 +5,35 @@
 
 html,
 body {
-    height: 100%;
     margin: 0;
     padding: 0;
     width: 100%;
-    background:linear-gradient( #0c0c0c 51px,#262626 51px, #262626 170px, #d9d9d9 170px, #d9d9d9);
 }
 
 body {
+    height: 100%;
     font-family: Helvetica, sans-serif;
-    z-index:-2;   
+    background-repeat: no-repeat; 
+    
+    /*background gradient--the clean way but creates fuzzy stops when background is stretched
+    background-image:linear-gradient(#0c0c0c 0px, #0c0c0c 51px, #262626 51px, #262626 170px, #d9d9d9 170px, #d9d9d9 100%);*/
+    
+    /*background gradient--the ugly way to avoid fuzzy stops*/
+    background-size:100% 50px,100% 150px,100% 100%;
+    background-position:0 0,0 50px,0 170px;
+    background-image:linear-gradient(#0c0c0c 0px, #0c0c0c 51px),
+        linear-gradient(#262626 51px, #262626 170px), 
+        linear-gradient(#d9d9d9 170px, #d9d9d9 100%);
 }
 
-/**,
+*,
 *:before,
 *:after {
     box-sizing: border-box;
-}*/
+}
 
 /*CUSTOM ELEMENTS*/
-content-container,
-background-layer1,
-background-layer2{
+content-container{
     display:block;
 }
 
@@ -36,8 +43,8 @@ content-container{
 }
 
 .card{
-    height: 20px;
-    margin-bottom: 100px;
+    height: 2000px;
+    margin-bottom:50px;
 }
 
 h1{
@@ -49,6 +56,7 @@ h1{
 shell-container{
     display: flex;
     flex-direction: column; 
+    justify-content: space-between;
     height:100%;
 }
 
