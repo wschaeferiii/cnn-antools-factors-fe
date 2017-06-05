@@ -26,14 +26,14 @@ function App() {
                 </Helmet>
                 <Header links={navigation} />
                 <h1>Factors</h1>
-                <Card className={styles.card}></Card>
+                <Card className={styles.paper}></Card>
                 <Switch>
                     {routes.map((route, i) => (
                         <Route key={i} {...route} />
                     ))}
                 </Switch>
             </content-container>
-            <Footer className={styles.footer}/>
+            <Footer/>
         </shell-container>
     );
 }
