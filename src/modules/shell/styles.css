@@ -1,33 +1,27 @@
 /*CUSTOM ELEMENTS--------------------*/
-content-container{
+content-container {
     display:block;
 }
 
 /*END CUSTOM ELEMENTS--------------------*/
 
-
 /*TYPOGRAPHY---------------------*/
-
 @font-face {
-  font-family: 'CNN Sans Light';
-  src: url('http://www.i.cdn.cnn.com/.a/fonts/cnn/3.5.0/cnnsans-light.woff2') format('woff2');
+    font-family: 'CNN Sans Light';
+    src: url('http://www.i.cdn.cnn.com/.a/fonts/cnn/3.5.0/cnnsans-light.woff2') format('woff2');
 }
 
-h1{
+h1 {
+    color: #fefefe;
     font: 36px/90px CNN Sans Light, sans-serif;
-    color: #FEFEFE;
     margin: 0;
-}
-
-/*END TYPOGRAPHY----------------*/
-
+}/*END TYPOGRAPHY----------------*/
 
 *,
 *:before,
 *:after {
     box-sizing: border-box;
 }
-
 
 html,
 body {
@@ -39,26 +33,26 @@ body {
 }
 
 body {
-    font-family: Helvetica, sans-serif;
-    background-repeat: no-repeat; 
     background: rgba(217, 217, 217, 1) url('http://i2.cdn.turner.com/cnn/partners/ksa/background.png') top repeat-x;
+    background-repeat: no-repeat;
+    font-family: Helvetica, sans-serif;
 }
 
 /*CONTENT CONTAINER MUST EXIST SO THAT THERE IS GRANULAR STYLING CONTROL OVER IT'S CONTENTS*/
-content-container{
-    width:77.4%;
+content-container {
     margin: 0 auto;
+    width:77.4%;
 }
 
-.paper{
-    min-height: 800px;
+.paper {
     height: auto;
     margin-bottom:50px;
+    min-height: 800px;
 }
 
-shell-container{
+shell-container {
     display: flex;
-    flex-direction: column; 
-    justify-content: space-between;
+    flex-direction: column;
     height:100%;
+    justify-content: space-between;
 }

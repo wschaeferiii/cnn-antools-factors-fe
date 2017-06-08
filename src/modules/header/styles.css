@@ -1,7 +1,7 @@
 .header {
     display: flex;
     height: 100%;
-    
+
     @media (max-width: 500px) {
         display: block;
         height: auto;
@@ -48,8 +48,8 @@
     height: 100%;
     line-height: 50px;
     padding: 0 1.2rem;
-    transition: background-color .2s;
     text-decoration: none;
+    transition: background-color .2s;
 
     &.active,
     &:hover {
