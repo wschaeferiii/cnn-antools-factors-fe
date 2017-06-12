@@ -9,6 +9,7 @@
     "babel-register": "6.24.1",
     "babel-resolver": "1.1.0",
     "cnn-server": "git+https://github.com/cnnlabs/cnn-server.git",
+    "jsonp": "0.2.1",
     "prop-types": "15.5.10",
     "react": "15.5.4",
     "react-dom": "15.5.4",
