@@ -1,14 +1,21 @@
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+/*CUSTOM ELEMENTS--------------------*/
+content-container {
+    display:block;
 }
 
-body {
-    font-family: Helvetica, sans-serif;
+/*END CUSTOM ELEMENTS--------------------*/
+
+/*TYPOGRAPHY---------------------*/
+@font-face {
+    font-family: 'CNN Sans Light';
+    src: url('http://www.i.cdn.cnn.com/.a/fonts/cnn/3.5.0/cnnsans-light.woff2') format('woff2');
 }
+
+h1 {
+    color: #fefefe;
+    font: 36px/90px CNN Sans Light, sans-serif;
+    margin: 0;
+}/*END TYPOGRAPHY----------------*/
 
 *,
 *:before,
@@ -16,8 +23,36 @@ body {
     box-sizing: border-box;
 }
 
-.foo {
+html,
+body {
+    /*HEIGHT IMPORTANT FOR STICKY FOOTER*/
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    background: rgba(217, 217, 217, 1) url('http://i2.cdn.turner.com/cnn/partners/ksa/background.png') top repeat-x;
+    background-repeat: no-repeat;
+    font-family: Helvetica, sans-serif;
+}
+
+/*CONTENT CONTAINER MUST EXIST SO THAT THERE IS GRANULAR STYLING CONTROL OVER IT'S CONTENTS*/
+content-container {
     margin: 0 auto;
-    width: 800px;
-    height: 800px;
+    width:77.4%;
+}
+
+.paper {
+    height: auto;
+    margin-bottom:50px;
+    min-height: 800px;
+}
+
+shell-container {
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    justify-content: space-between;
 }
