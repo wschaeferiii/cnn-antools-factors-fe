@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image-Single UI Component should render 1`] = `
+<div
+  className="foo"
+>
+  <FetchData
+    url="http://data.cnn.com/jsonp/content/ksa/factors.json"
+  />
+</div>
+`;

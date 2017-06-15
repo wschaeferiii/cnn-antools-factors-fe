@@ -3,7 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "cnn-starter-app": "git+ssh://git@github.com/cnnlabs/cnn-starter-app.git"
+    "cnn-starter-app": "git+ssh://git@github.com/cnnlabs/cnn-starter-app.git",
+    "enzyme": "2.8.2",
+    "enzyme-to-json": "1.5.1",
+    "identity-obj-proxy": "3.0.0",
+    "react-addons-test-utils": "15.6.0",
+    "react-dom": "15.5.4",
+    "react-test-renderer": "15.6.1"
   },
   "dependencies": {
     "babel-register": "6.24.1",
@@ -12,7 +18,6 @@
     "jsonp": "0.2.1",
     "prop-types": "15.5.10",
     "react": "15.5.4",
-    "react-dom": "15.5.4",
     "react-helmet": "5.0.3",
     "react-hot-loader": "3.0.0-beta.6",
     "react-router-dom": "4.1.1",
@@ -23,6 +28,17 @@
     "build": "cnn-starter-app build",
     "create": "cnn-starter-app create",
     "start": "cnn-starter-app start",
-    "test": "cnn-starter-app test"
+    "test": "jest && cnn-starter-app test"
+  },
+  "jest": {
+    "setupFiles": [
+      "./test/jestsetup.js"
+    ],
+    "snapshotSerializers": [
+      "./node_modules/enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|scss)$": "identity-obj-proxy"
+    }
   }
 }

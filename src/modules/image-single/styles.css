@@ -1,8 +1,8 @@
 .foo {
-    width: 25%;
     background-color: red;
+    width: 25%;
 }
 .res_img {
-    width: 98%;
     height: auto;
+    width: 98%;
 }

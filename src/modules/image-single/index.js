@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import FetchData from 'modules/fetch-data'
+import get from 'lodash/get';
+import FetchData from '../fetch-data';
 import PropTypes from 'prop-types'
 import styles from './styles.css';
 class ImageSingle extends Component {
@@ -17,9 +18,14 @@ class ImageSingle extends Component {
         return (
             <div className={styles.foo}>
                 <FetchData url={this.props.url}>
-                    {(err, data) => data && (
-                        <img className={styles.res_img} src={data[this.props.slug].coverArt[0].URL}></img>
-                    )}
+                    {(err, data) => {
+                        const { slug } = this.props;
+                        const src = get(data[slug], 'coverArt[0].URL', '');
+
+                        return (
+                            <img className={styles.res_img} src={src}></img>
+                        );
+                    }}
                 </FetchData>
             </div>
         );

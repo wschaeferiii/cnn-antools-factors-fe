@@ -1,1 +1,6 @@
-{ "extends": "cnn-starter-app" }
+{
+    "extends": "cnn-starter-app",
+    "env": {
+        "jest": true
+    }
+}
