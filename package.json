@@ -44,7 +44,7 @@
     "react-toolbox": "2.0.0-beta.12"
   },
   "devDependencies": {
-    "cnn-starter-app": "git+ssh://git@github.com/cnnlabs/cnn-starter-app.git",
+    "cnn-starter-app": "git+https://github.com/cnnlabs/cnn-starter-app.git",
     "jq-cli-wrapper": "0.4.0"
   },
   "license": "Apache-2.0",
