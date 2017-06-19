@@ -1,0 +1,9 @@
+./.codeship
+./.dockerignore
+./.editorconfig
+./.git
+./.gitignore
+./.ignore
+./.npmrc
+./.nvmrc
+./vendor/

@@ -1,0 +1,18 @@
+- type: serial
+  service: cicd
+  steps:
+  - name: generate docker-compose .env file
+    command: sh .codeship/generate-env-file.sh
+
+  - name: docker-compose build
+    command: docker-compose build
+
+  - name: docker-compose push
+    command: sh .codeship/docker-push.sh
+
+  - name: harbor-compose catalog
+    command: harbor-compose -f .codeship/docker-compose.yml -c .codeship/harbor-compose.yml catalog
+
+  - name: harbor-compose deploy
+    tag: "^.*cicd$"
+    command: harbor-compose -f .codeship/docker-compose.yml -c .codeship/harbor-compose.yml deploy

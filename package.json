@@ -2,8 +2,33 @@
   "name": "cnn-antools-factors-fe",
   "version": "0.1.0",
   "private": true,
-  "devDependencies": {
-    "cnn-starter-app": "git+ssh://git@github.com/cnnlabs/cnn-starter-app.git"
+  "description": "CNN Apple News Tools Factors Front End",
+  "main": "server.js",
+  "config": {
+    "docker_build_path": ".",
+    "port": "8080"
+  },
+  "scripts": {
+    "_docker-compose-build": "npm run _generate-docker-env-file && docker-compose build",
+    "_generate-docker-env-file": "echo VERSION=$(jq -r .version package.json)-local.$(uuidgen) > .env && echo PORT=8080 >> .env && echo COMPOSE_FILE=.codeship/docker-compose.yml >> .env",
+    "analyze": "cnn-starter-app analyze",
+    "build": "cnn-starter-app build",
+    "create": "cnn-starter-app create",
+    "encrypt-envvars": "jet encrypt .codeship/codeship.env .codeship/codeship.env.encrypted --key-path .codeship/codeship.aes",
+    "start-docker-local": "npm run _docker-compose-build && docker-compose up -d && docker-compose ps",
+    "start": "cnn-starter-app start",
+    "test": "cnn-starter-app test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnnlabs/cnn-antools-factors-fe"
+  },
+  "bugs": {
+    "url": "http://tickets.turner.com/issues/?filter=29084"
+  },
+  "homepage": "https://github.com/cnnlabs/cnn-antools-factors-fe#readme",
+  "engines": {
+    "node": "8.1.2"
   },
   "dependencies": {
     "babel-register": "6.24.1",
@@ -18,11 +43,15 @@
     "react-router-dom": "4.1.1",
     "react-toolbox": "2.0.0-beta.12"
   },
-  "scripts": {
-    "analyze": "cnn-starter-app analyze",
-    "build": "cnn-starter-app build",
-    "create": "cnn-starter-app create",
-    "start": "cnn-starter-app start",
-    "test": "cnn-starter-app test"
-  }
+  "devDependencies": {
+    "cnn-starter-app": "git+ssh://git@github.com/cnnlabs/cnn-starter-app.git",
+    "jq-cli-wrapper": "0.4.0"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "cnn",
+    "cnnlabs",
+    "apple news",
+    "apple news factors"
+  ]
 }

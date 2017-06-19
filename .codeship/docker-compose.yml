@@ -1,0 +1,10 @@
+version: "2"
+services:
+  cnn-antools-factors-fe:
+    build: ../
+    image: quay.io/turner/cnn-antools-factors-fe:${VERSION}
+    ports:
+      - ${PORT}:5050
+    environment:
+      HEALTHCHECK: /_healthcheck
+      PORT: "5050"

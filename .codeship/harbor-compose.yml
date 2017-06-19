@@ -1,0 +1,12 @@
+version: "1"
+shipments:
+  cnn-antools-factors-fe:
+    env: ref
+    barge: ent-prod
+    containers:
+    - cnn-antools-factors-fe
+    replicas: 1
+    group: cnn
+    property: cnn.com
+    project: antools-factors
+    product: cnn-antools-factors-fe

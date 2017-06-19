@@ -1,0 +1,6 @@
+cicd:
+  image: quay.io/turner/harbor-cicd-image:v0.11.0
+  encrypted_env_file: .codeship/codeship.env.encrypted
+  add_docker: true
+  volumes:
+    - ./:/app
