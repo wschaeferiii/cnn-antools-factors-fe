@@ -12,7 +12,7 @@ the Codeship UI first.
 - Log into Codeship - https://codeship.com
 
 - Make sure you are looking at the "Turnerbroadcasting" organization Dashboard,
-  NOT your personal Dashboard.  It should say in the top left of the page.
+  NOT your personal Dashboard. It should say in the top left of the page.
 
 - Choose "Projects" from the top navigation.
 
@@ -31,12 +31,12 @@ the Codeship UI first.
 
 ## Files that are NOT checked into source control
 
-- `codeship.aes`: Must contain the "AES Key" for the project.  This key can be
+- `codeship.aes`: Must contain the "AES Key" for the project. This key can be
   found on the "General" tab of the Codehsip Pro Project Settings page.
 
-- `codeship.env`: Contains all of the ENVIRONMENT variables needed for the
-  project.  The minimum file should contain the proper values for the following
-  template.  Get the values to use from your team Architect.
+- `codeship.env`: Contains all of the ENVIRONMENT variables needed for building
+  the project. The minimum file should contain the proper values for the
+  following template. Get the values to use from your team Architect.
 
   ```
   DOCKER_USER=
@@ -44,7 +44,7 @@ the Codeship UI first.
   ```
 
   If you intend to do CD you will also need the following where `[PACKAGE_NAME]`
-  is your package name in all caps with underscores for spaces and hyphens.  You
+  is your package name in all caps with underscores for spaces and hyphens. You
   can get the token from the Harbor shipment for the environment that it should
   auto deploy to.
 
@@ -71,5 +71,5 @@ the Codeship UI first.
 - `docker-push.sh`: A shell script to run `docker-compose push`. This is only
   needed due to a defect in the Codeship system that has not been resolved yet.
 
-- `version.sh`: This sets the version of the image that is created based on the
-  `package.json` version, `${CI_BRANCH}`, and `${CI_BRANCH_ID}`.
+- `generate-env-file.sh`: This sets the version of the image that is created
+  based on the `package.json` version, `${CI_BRANCH}`, and `${CI_BRANCH_ID}`.
