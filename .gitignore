@@ -9,5 +9,6 @@ codeship.aes
 codeship.env
 dist/
 env
+package-local.json
 node_modules/
 vendor/

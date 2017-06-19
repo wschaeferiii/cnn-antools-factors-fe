@@ -4,10 +4,6 @@
   "private": true,
   "description": "CNN Apple News Tools Factors Front End",
   "main": "server.js",
-  "config": {
-    "docker_build_path": ".",
-    "port": "8080"
-  },
   "scripts": {
     "_docker-compose-build": "npm run _generate-docker-env-file && docker-compose build",
     "_generate-docker-env-file": "echo VERSION=$(jq -r .version package.json)-local.$(uuidgen) > .env && echo PORT=8080 >> .env && echo COMPOSE_FILE=.codeship/docker-compose.yml >> .env",
@@ -28,7 +24,7 @@
   },
   "homepage": "https://github.com/cnnlabs/cnn-antools-factors-fe#readme",
   "engines": {
-    "node": "7.10.0"
+    "node": "8.1.2"
   },
   "dependencies": {
     "babel-register": "6.24.1",

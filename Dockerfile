@@ -1,6 +1,6 @@
 # Pull the official Node.js Docker image
 # This should match the `engines` property in `package.json` and `.nvmrc`
-FROM node:7.10.0
+FROM node:8.1.2
 
 
 # Create install location in Docker container
