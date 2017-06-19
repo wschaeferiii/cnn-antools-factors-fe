@@ -8,6 +8,7 @@ short_build_id=`echo ${CI_BUILD_ID} | cut -b 1-7`
 echo "VERSION=$(jq -r .version package.json)-${CI_BRANCH}.${short_build_id}" > .env
 echo "PORT=80" >> .env
 echo "COMPOSE_FILE=.codeship/docker-compose.yml" >> .env
+echo "CNN_ANTOOLS_FACTORS_FE_REF_TOKEN=WkoQY48Z2sLR1rdjWXwerfqbxqFROiX4" >> .env
 
 
 cat .env
