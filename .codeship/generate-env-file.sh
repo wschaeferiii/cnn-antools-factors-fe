@@ -6,7 +6,6 @@ short_build_id=`echo ${CI_BUILD_ID} | cut -b 1-7`
 # ${CI_BUILD_ID:0:6} doesn't work for some reason
 
 echo "VERSION=$(jq -r .version package.json)-${CI_BRANCH}.${short_build_id}" > .env
-echo "DOCKER_COMPOSE_PATH=../" >> .env
 echo "PORT=80" >> .env
 echo "COMPOSE_FILE=.codeship/docker-compose.yml" >> .env
 

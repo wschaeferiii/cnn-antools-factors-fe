@@ -12,7 +12,7 @@ WORKDIR /cnn-antools-factors-fe
 
 
 # Install
-RUN npm install --loglevel warn
+RUN npm install
 
 
 # Fire it up
