@@ -5,7 +5,7 @@ shipments:
     barge: ent-prod
     containers:
     - cnn-antools-factors-fe
-    replicas: 1
+    replicas: 2
     group: cnn
     property: cnn.com
     project: antools-factors
