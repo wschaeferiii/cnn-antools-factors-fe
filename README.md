@@ -55,25 +55,43 @@ Here are the common ones:
 
 
 
-## ENVIRONMENT variables
+## CI/CD ENVIRONMENT variables
 
-- `ENVIRONMENT`: If `prod`, in PRODUCTION mode. Otherwise it does not.
+- `PORT`: The external port to run on.
 
-- `PORT`: The external port to run on.  Only used when running in a Docker
-  container locally. The PORT inside the Docker container that the app runs on
-  is hardcoded to 5050.  In upstream Harbor environments, this is set to 80.
+  The PORT inside the Docker container that he app runs on is hardcoded to 5050.
+
+  In upstream Harbor environments, this is set to 80.
+
   When running in Docker on localhost this must be set to an open PORT.  On many
   development machines 80 is in use or requires `sudo` to run, so it is easier
   to set it to an open port > 1000.
 
-- `DOCKER_USER`: The username to log into Quay.io, our Docker registry.
+  Again, this is only needed on localhost when running in a Docker container on
+  localhost.
 
-- `DOCKER_PASS`: The password to log into Quay.io, our Docker registry.
+- `DOCKER_USER`: The username to log into Quay.io. This is a team user.  If you
+  need it, ask the Architect on your team.
+
+- `DOCKER_PASS`: The password to log into Quay.io. If you need it, ask the
+  Architect on your team.
 
 - `CNN_ANTOOLS_FACTORS_FE_REF_TOKEN`: The Harbor build token to use when doing
-  continuous deployment from Codeship to the REF environment. (rarely used)
+  continuous deployment from Codeship to the REF environment.
+  Occasionally used by CI/CD; Rarely used by humans.
+
+- `VERSION`: The auto generated version to use in CI/CD.
+
+- `COMPOSE_FILE`: Path to `docker-compose.yml`.
+
+- `HEALTHCHECK`: Used by Harbor for monitoring.
 
 
+## App ENVIRONMENT variables
+
+- `DISABLE_SSR`: Disables server side rendering.
+
+- `NODE_ENV`: Runs the app in _production_ mode.
 
 
 ## Developer notes
@@ -81,7 +99,7 @@ Here are the common ones:
 - Develop with the most current version of node specified in the [.nvmrc][3]
 file. It is recommended to use [nvm][4] to manage node versions.
 
-- Contributors shoudl be familiar with the [Contributor's Guide][5]
+- Contributors should be familiar with the [Contributor's Guide][5]
 
 - Collaborators should be familiar with the [Collaborator's Guide][6]
 
@@ -99,4 +117,4 @@ See [LICENSE.md](./LICENSE.md) for details.
 
 
 ---
-⧓ Bow ties are cool. - Eleventh Doctor
+⧓ Bow ties are cool. - The Eleventh Doctor
